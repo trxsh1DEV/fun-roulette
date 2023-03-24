@@ -15,11 +15,23 @@ spinBtn.addEventListener('click', () => {
     // console.log('rotação atual','rotação roleta', valueRotation);
     let convertRotate = Math.round(valueRotation / 45);
     console.log('casas puladas', convertRotate);
+    console.log(valueRotation);
     valueRotation += rand(720, 405);
-    // console.log(t[0].firstElementChild.textContent);
-    // if(currentRotate <= 90){
-    //     // console.log(t[0].getAttribute('data-id').valueOf())
-    //     // console.log(t[0].firstElementChild.textContent);
-    //     return
-    // }
+    if(convertRotate > 0){
+        // console.log(t[0].getAttribute('data-id').valueOf())
+        // console.log(t[0].firstElementChild.textContent);
+        while(convertRotate >= 8){
+            convertRotate = convertRotate - 8;
+        }
+        console.log(convertRotate);
+        // convertRotate = Number(convertRotate);
+        t.forEach((item) => {
+            console.log(item.firstElementChild);
+        })
+        console.log(convertRotate, t[convertRotate]);
+        setTimeout(() => {
+            t[convertRotate].classList.add('active');
+        }, 5000)
+        // console.log(t[18].firstElementChild.textContent);
+    }
 });

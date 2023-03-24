@@ -22,7 +22,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: greenyellow; */
 }
 
 .container .spin-btn {
@@ -83,7 +82,6 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
-    /* cursor: pointer; */
 }
 
 .container .wheel .numb span {
@@ -96,6 +94,8 @@ body {
     text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Classes adicionais */
+
 .selector {
     width: 5px;
     height: 5px;
@@ -106,8 +106,70 @@ body {
 }
 
 .active {
-    background-color: #000 !important;
-    color: #000 !important;
+    /* background-color: #000; */
+    cursor: pointer;
+}
+
+.oculte-mode {
+    user-select: none;
+    opacity: 0.3;
+}
+
+/* Modal */
+dialog::backdrop {
+    background-color: rgba(0 0 0 / .8);
+    margin: auto;
+}
+
+dialog {
+    display: block;
+    opacity: 0;
+    margin: auto;
+    padding: 2em;
+    border: none;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: justify;
+    box-shadow: 0 0 5em rgba(64 224 208 / .5);
+    background-color: #444;
+    color: aliceblue;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 400ms ease-in-out;
+}
+
+dialog[open]{
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+dialog p::selection, dialog h2::selection {
+    background-color: #111;
+    color: turquoise;
+}
+
+dialog h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+dialog > #btn-close {
+    width: 100%;
+    cursor: pointer;
+    font-size: 2.2em;
+    text-align: end;
+    margin-top: 15px;
+}
+
+dialog > #btn-close:hover{
+    transform:translateY(-15%);   
+    /* opacity: .8; */
+    color:indianred;
+    transition: all 400ms ease-in-out;
 }
 
 /* .container .wheel .numb span::after {

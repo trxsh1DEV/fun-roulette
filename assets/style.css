@@ -17,8 +17,8 @@ body {
 
 .container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,11 +61,11 @@ body {
     height: 100%;
     background-color: #444;
     border-radius: 50%;
-    overflow: hidden;
     box-shadow: 0 0 5px #333,
     0 0 0 15px #fff,
     0 0 0 18px #111;
     transition: transform 5s ease-in-out;
+    overflow: hidden;
 }
 
 .container .wheel .numb {
@@ -96,14 +96,14 @@ body {
 
 /* Classes adicionais */
 
-.selector {
+/* .selector {
     width: 5px;
     height: 5px;
     background-color: red;
     z-index: 5;
     position: absolute;
     top: 20px;
-}
+} */
 
 .active {
     /* background-color: #000; */
@@ -117,7 +117,7 @@ body {
 
 /* Modal */
 dialog::backdrop {
-    background-color: rgba(0 0 0 / .8);
+    background-color: rgba(0 0 0 / .9);
     margin: auto;
 }
 
@@ -128,7 +128,7 @@ dialog {
     padding: 2em;
     border: none;
     border-radius: 20px;
-    width: 90%;
+    width: 80vw;
     max-width: 500px;
     text-align: justify;
     box-shadow: 0 0 5em rgba(64 224 208 / .5);
@@ -143,6 +143,7 @@ dialog {
 dialog[open]{
     opacity: 1;
     pointer-events: inherit;
+    /* margin-right: 22vw; */
 }
 
 dialog p::selection, dialog h2::selection {
@@ -178,3 +179,4 @@ dialog > #btn-close:hover{
     font-size: 0.7em;
     font-weight: 500;
 } */
+

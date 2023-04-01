@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Sumir warning do github: rror with Permissions-Policy header... - FONTE: https://stackoverflow.com/questions/69619035/error-with-permissions-policy-header-unrecognized-feature-interest-cohort -->
+  <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> -->
   <link rel="stylesheet" href="./assets/style.css">
   <title>Document</title>
 </head>
@@ -48,16 +50,14 @@
         <div class="numb" id="1" style="--i:2;--clr:#20b2aa;" data-id="90">
           <span>Desafio 7</span>
         </div>
-
-        
       </div>
     </div>
   </main>
 
   <dialog>
-    <h2>Any Title</h2>
+    <h2 class="ask-title">Any Title</h2>
     
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto fugiat voluptate a beatae ea, libero,
+    <p class="ask-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto fugiat voluptate a beatae ea, libero,
       dolorum mollitia atque quaerat iure est corporis saepe molestias quo dolores repellendus. Voluptate, quod
       aperiam.</p>
       
@@ -65,6 +65,7 @@
   </dialog>
 
   <script src="./assets/main.js"></script>
+  <script src="./assets/data/default.js"></script>
 </body>
 
 </html>

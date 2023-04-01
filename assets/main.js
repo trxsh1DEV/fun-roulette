@@ -18,8 +18,8 @@ spinBtn.addEventListener("click", () => {
   // console.log('a', valueRotation);
   // console.log('rotação atual','rotação roleta', valueRotation);
   let convertRotate = Math.round(valueRotation / 45);
-  console.log("casas puladas", convertRotate);
-  console.log(valueRotation);
+  // console.log("casas puladas", convertRotate);
+  // console.log(valueRotation);
   valueRotation += rand(720, 405);
   if (convertRotate > 0) {
     // console.log(t[0].getAttribute('data-id').valueOf())
@@ -45,8 +45,10 @@ spinBtn.addEventListener("click", () => {
     }, 5000);
 
     t[convertRotate].onclick = () => {
+      const askTitle = document.querySelector(".ask-title");
+      askTitle.innerHTML = questions[convertRotate].title;
       modal.firstElementChild.nextElementSibling.innerHTML =
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto fugiat voluptate a beatae ea, libero, ALÁ O VIADO TENTANDO LER EM LATIM KKKKKKKKKKKK";
+        questions[convertRotate].content;
       modal.showModal();
       btnClosed.onclick = () => modal.close();
     };
